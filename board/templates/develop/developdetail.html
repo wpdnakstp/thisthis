@@ -227,7 +227,7 @@ tr th{
               <a href="{% url 'developdelete' develop.id %}" class="btn" id="toggleweight">삭제하기</a>
               <form action="{% url 'developLike' develop_id=develop.id %}" method="POST" style="display:inline-block;">
                       {% csrf_token %}
-                      <input class="btn" id="toggleweight" value="좋아요♥">
+                      <input type="submit" class="btn" id="toggleweight" value="좋아요♥">
               </form>
           
               <hr>
