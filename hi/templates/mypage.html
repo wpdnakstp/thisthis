@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+			
+		<!-- Header -->
+		{% block content %}
+
+		{% if error %}
+         <script>
+            alert('{{error}}')
+         </script>
+      {% endif %}
+		<!-- Main -->
+
+			<div id="main">
+
+				<!-- Intro -->
+ 
+    <div class="main-wrapper">
+	    <section class="cta-section theme-bg-light py-5">
+			    <div class="container text-center">
+						<div class="animate three" style="font-family: 'stencil';" id="font">
+								<span>T</span> <span>U</span> <span>R</span> <span>N</span> <span>I</span> <span>N</span> <span>G</span> 
+							<span>P</span> <span>O</span> <span>I</span> <span>N</span> <span>T</span>
+						  
+						</div>
+		    <div class="container text-center">
+				<div class="intro" style="font-family: 'NanumBarunpen';" >군생활을 기록하다.</div>
+			
+			    <!-- <form class="signup-form form-inline justify-content-center pt-3">
+                    <div class="form-group">
+                        <label class="sr-only" for="semail"></label>
+                        <input type="email" id="semail" name="semail1" class="form-control mr-md-1 semail" placeholder="">
+                    </div>
+                    <button type="submit" class="btn btn-primary">검색</button>
+                </form> -->
+		    </div><!--//container-->
+		</section>
+		<h1 style="font-size:15px; text-align:center; padding-bottom: 30px;">각 커뮤니티에서 인기있는 글을 만나보세요.</h1>
+		<div class="textboxlist" id="mydivTextBox">
+			<ul class="textboxlist-ul" id="myListbox"> 
+				<li style="padding-left:53px;">
+				  <a href="{% url 'post_2' %}">
+					<div class="text">
+					  <h2>공부</h2>
+					  <p style="	font-family: 'NanumBarunpen';" >토익,공무원,수능 비법들이 궁금하십니까?</p>
+					</div>
+					<div class="overlay"></div>
+					<img src="{% static '/img/book6.jpg' %}" alt="" style="width:277px">
+				  </a>
+				</li>
+				<li style="padding-left:53px;">
+				  <a href="{% url 'post_3' %}">
+					<div class="text">
+					  <h2>꿀팁</h2>
+					  <p>군대 꿀팁 알려주죠.</p>
+					</div>
+					<div class="overlay"></div>
+					<img src="https://robofunny.com/2016/11/south-korea-military-get-free-mobile-phones-but-with-one-catch.jpg" alt="" />
+				  </a>
+				</li>
+				<li style="padding-left:53px;">
+				  <a href="{% url 'post_4' %}">
+					<div class="text">
+					  <h2>운동</h2>
+					  <p>몸을 어떻게 만들까?</p>
+					</div>
+					<div class="overlay"></div>
+					<img src="{% static '/img/exercise.jpg' %}" alt="" style="width:277px">
+				</a>
+				</li>
+				<li style="padding-left:53px;">
+						<a href="{% url 'post_2' %}">
+						  <div class="text">
+							<h2>자격증</h2>
+							<p>자격증 공부비법!</p>
+						  </div>
+						  <div class="overlay"></div>
+						  <img src="{% static '/img/book7.jpg' %}" alt="" style="width:277px">
+						</a>
+					  </li>
+			  </ul>
+			</section>
+			<section class="cta-section theme-bg-light py-5"style="margin-top:40px" >
+					<div class="container text-center">
+		<h1 class="heading" style= " font-size: 2em; text-align: center; background: #FAFAFA; "> 베스트 인기글</h1>
+		<div class="intro" style= "font-size: 0.8em; text-align: center; ">인기 있는 글들을 만나보세요. </div>
+	</section>
+			
+	    <section class="blog-list px-3 py-5 p-md-5">
+		    <div class="container">
+					<div class="item mb-5">
+							<div class="item">
+								<div class="media">
+									<img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{% static '/img/blog_flight.jpg' %}" alt="image">
+									<div class="media-body">
+										<h3 class="title mb-1"><a href="{% url 'post_9' %}">군대 2년, 버리는 시간 아니지 말입니다. </a></h3>
+										<div class="meta mb-1"><span class="date">Published 3 months ago</span><span class="time">2 min read</span><span class="comment"><a href="#">1 comment</a></span></div>
+										<div class="intro">
+												나의 군 복무 시절은 세 마디로 나뉜다. 책을 못 읽은 시기. 대강 읽은 시기. 전투적으로 읽은 시기. 이른바 ‘짬’이 없던 때는 책을 펼치지 못했다. 시키는 일을 끝내면 새로운 일을
+												 시작해야 했기 때문이다. 계급이 오르자 조금씩 책을 볼 짬이 났다. 상병이 되고 ‘고무신’을 잃어버렸다. 이때부터 전투적인 책 읽기를 시작했다. 통장 잔고에 월급이 들어오는 족족
+												  인터넷 서점으로 </div>
+										<a class="more-link" href="{% url 'post_9' %}">Read more &rarr;</a>
+									</div><!--//media-body-->
+								</div><!--//media-->
+							</div><!--//item-->
+							</div>
+			    <div class="item mb-5">
+				    <div class="media">
+					    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{% static '/img/blog_study2.jpg' %}" alt="image">
+					    <div class="media-body">
+						    <h3 class="title mb-1"><a href="{% url 'post_1' %}">군대에서 수능 공부를 생각하는 분들께</a></h3>
+						    <div class="meta mb-1"><span class="date">Published 2 days ago</span><span class="time">5 min read</span><span class="comment"><a href="#">8 comments</a></span></div>
+						    <div class="intro">1) 최악의 경우, 군대에서 제대로 공부하지 못할 것까지 감안하라.
+
+
+									당연한 말이겠지만, 군대는 개인의 발전과 공부가 목표가 아니라 
+									
+									나라를 지키기 위하여 오는 곳입니다.
+									
+									때문에 군대에서 수능 공부를 하고자 할 경우에, 
+									
+									</div>
+						    <a class="more-link" href="{% url 'post_1' %}">Read more &rarr;</a>
+					    </div><!--//media-body-->
+				    </div><!--//media-->
+			    </div><!--//item-->
+			    <div class="item mb-5">
+				    <div class="media">
+					    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{% static '/img/blog_toeic.jpg' %}" alt="image">
+					    <div class="media-body">
+						    <h3 class="title mb-1"><a href="{% url 'post_5' %}">(인터뷰) 군대에서 토익 860점 받았어요!</a></h3>
+						    <div class="meta mb-1"><span class="date">Published 3 months ago</span><span class="time">3 min read</span><span class="comment"><a href="#">26 comments</a></span></div>
+						    <div class="intro">대한민국 남자로서 2년간 군생활을 해야 하는데,
+									남들과 똑같은 시간을 보내고 싶진 않았어요.
+									주변에서 "군생활 너무 길다.", "시간 아깝다." 라는 말을 많이 하는데
+									</div>
+						    <a class="more-link" href="{% url 'post_5' %}">Read more &rarr;</a>
+					    </div><!--//media-body-->
+				    </div><!--//media-->
+			    </div><!--//item-->
+			    
+			    <div class="item mb-5">
+				    <div class="media">
+					    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{% static '/img/blog_study.jpg' %}" alt="image">
+					    <div class="media-body">
+						    <h3 class="title mb-1"><a href="{% url 'post_6' %}">400여일 군수생 후기</a></h3>
+						    <div class="meta mb-1"><span class="date">Published 1 month ago</span><span class="time">8 min read</span><span class="comment"><a href="#">12 comments</a></span></div>
+						    <div class="intro">안녕하세요 이번에 수능을 보았던 96군수생입니다.
+
+								한번 새벽 감성을 넣어 작년 9월부터의 400여일간의 저의 군수생 생활을 써보려합니다. 군수생에 도전하시는 분도 있을텐데 제 글을 보고 참고했으면 합니다.</div>
+						    <a class="more-link" href="{% url 'post_6' %}">Read more &rarr;</a>
+					    </div><!--//media-body-->
+				    </div><!--//media-->
+			    </div><!--//item-->
+			    <div class="item mb-5">
+				    <div class="media">
+					    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{% static '/img/blog_army2.jpeg' %}" alt="image">
+					    <div class="media-body">
+						    <h3 class="title mb-1"><a href="http://news.chosun.com/misaeng/site/data/html_dir/2018/02/13/2018021300998.html">(기사)전역한 취준생에게 물었습니다, “군대서 잘한 일은?”</a></h3>
+						    <div class="meta mb-1"><span class="date">Published 2 months ago</span><span class="time">15 min read</span><span class="comment"><a href="#">3 comments</a></span></div>
+						    <div class="intro">훈련·작업·근무로 꽉 찬 군 복무 기간
+								자투리 시간 어떻게 썼느냐에 따라 희비 갈려 
+								못해봐서 후회하는 일 '독서', 잘한 일도 '독서'</div>
+						    <a class="more-link" href="http://news.chosun.com/misaeng/site/data/html_dir/2018/02/13/2018021300998.html">Read more &rarr;</a>
+					    </div><!--//media-body-->
+				    </div><!--//media-->
+			    </div><!--//item-->
+			    
+			    <div class="item mb-5">
+				    <div class="media">
+					    <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{% static '/img/blog_army1.jpeg' %}" alt="image">
+					    <div class="media-body">
+						    <h3 class="title mb-1"><a href="https://news.joins.com/article/23189252">(기사)군대에서 6개월 공부하고 수능 만점받은 공군일병</a></h3>
+						    <div class="meta mb-1"><span class="date">Published 2 months ago</span><span class="time">10 min read</span><span class="comment"><a href="#">23 comments</a></span></div>
+						    <div class="intro">성균관대학교 러시아어문학과를 휴학하고 올해 5월 공군에 입대한 김형태(22) 일병이 2019년 대학수학능력시험(수능)에서 만점을 받았다.   
+  
+									공군은 제3방공유도탄여단(3여단)에서 근무하는 김 일병이 올해 수능 만점자 9명 중 1명에 해당한다고 7일 밝혔다. 
+									
+									[출처: 중앙일보] 군대에서 6개월 공부하고 수능 만점받은 공군 일병</div>
+						    <a class="more-link" href="{% url 'post_8' %}">Read more &rarr;</a>
+					    </div><!--//media-body-->
+				    </div><!--//media-->
+			    </div><!--//item-->
+			    
+			
+	    </section>
+	    
+
+		   
+	        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+     
+    
+    </div><!--//main-wrapper-->
+    
+    
+    
+    
+    <!-- *****CONFIGURE STYLE (REMOVE ON YOUR PRODUCTION SITE)****** -->  
+    <div id="config-panel" class="config-panel d-none d-lg-block">
+        <div class="panel-inner">
+            <h5 class="panel-title">Choose Colour</h5>
+            <ul id="color-options" class="list-inline mb-0">
+                <li class="theme-1 active list-inline-item"><a data-style="{% static 'assets/css/theme-1.css' %}" href="#"></a></li>
+                <li class="theme-2  list-inline-item"><a data-style="{% static 'assets/css/theme-2.css' %}" href="#"></a></li>
+                <li class="theme-3  list-inline-item"><a data-style="{% static 'assets/css/theme-3.css' %}" href="#"></a></li>
+                <li class="theme-4  list-inline-item"><a data-style="{% static 'assets/css/theme-4.css' %}" href="#"></a></li>
+                <li class="theme-5  list-inline-item"><a data-style="{% static 'assets/css/theme-5.css' %}" href="#"></a></li>
+                <li class="theme-6  list-inline-item"><a data-style="{% static 'assets/css/theme-6.css' %}" href="#"></a></li>
+                <li class="theme-7  list-inline-item"><a data-style="{% static 'assets/css/theme-7.css' %}" href="#"></a></li>
+                <li class="theme-8  list-inline-item"><a data-style="{% static 'assets/css/theme-8.css' %}" href="#"></a></li>
+            </ul>
+            <a id="config-close" class="close" href="#"><i class="fa fa-times-circle"></i></a>
+        </div><!--//panel-inner-->
+    </div><!--//configure-panel-->
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li style="max-width:none; padding-left:16px;">&copy;likelion.khu</li><li style="max-width:none;">나경엽,오석호,신제우,정민지</a></li>
+					</ul>
+
+			</div>
+
+{% endblock %}
